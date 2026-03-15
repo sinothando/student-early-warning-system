@@ -129,7 +129,13 @@ student-early-warning-system
 │
 ├── README.md
 ├── SPECIFICATION.md
-└── ARCHITECTURE.md
+├── ARCHITECTURE.md
+│
+└── docs
+     └── diagrams
+          ├── context-diagram.png
+          ├── container-diagram.png
+          └── component-diagram.png
 
 ---
 
