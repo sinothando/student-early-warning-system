@@ -150,6 +150,51 @@ Potential future enhancements for the system may include:
 
 ---
 
+## Github Part
+
+## Kanban Board Customization
+
+The GitHub Kanban board was customized to support Agile workflow management for the Student Early Warning System.
+
+### Custom Columns
+
+Two additional columns were added:
+
+- **Testing**  
+  This column represents tasks that have been completed and are undergoing verification before being marked as done. It aligns with quality assurance (QA) practices in software development.
+
+- **Blocked**  
+  This column is used to track tasks that cannot proceed due to dependencies or issues. It helps identify bottlenecks in the workflow and ensures transparency.
+
+### Task Organization
+
+User stories created in Assignment 6 were added to the Kanban board as GitHub Issues. These issues were categorized into different stages of development:
+
+- **To Do:** Tasks ready to be started  
+- **In Progress:** Tasks currently being worked on  
+- **Testing:** Tasks under verification  
+- **Done:** Completed tasks  
+- **Blocked:** Tasks facing issues  
+
+### Labels and Assignments
+
+Each issue was labeled to indicate:
+- Priority (e.g., high-priority)
+- Type (e.g., feature, system)
+- Area (e.g., frontend, backend)
+
+Tasks were assigned using @mentions to simulate team responsibility, even though the project is completed individually.
+
+### Agile Alignment
+
+The Kanban board supports Agile principles by:
+- Providing visual workflow tracking
+- Limiting work-in-progress
+- Enabling continuous task movement
+- Improving transparency and organization
+
+Overall, the customized Kanban board enhances task management and reflects real-world Agile development practices.
+
 ## Author
 **Sinothando Masiki**  
 
