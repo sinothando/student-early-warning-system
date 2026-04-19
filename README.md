@@ -195,6 +195,34 @@ The Kanban board supports Agile principles by:
 
 Overall, the customized Kanban board enhances task management and reflects real-world Agile development practices.
 
+
+## Assignment 8: Object and Workflow Modeling
+
+This section contains the UML diagrams used to model system behavior and workflows.
+
+### State Transition Diagrams
+- [View State Diagrams](STATE_DIAGRAMS.md)
+
+These diagrams model how key system objects change over time based on events and conditions.
+
+---
+
+### Activity Diagrams
+- [View Activity Diagrams](ACTIVITY_DIAGRAMS.md)
+
+These diagrams represent system workflows, including decision points, parallel processes, and actor responsibilities.
+
+---
+
+### Traceability
+
+All diagrams are mapped to:
+
+- Functional Requirements (Assignment 4)
+- User Stories and Sprint Tasks (Assignment 6)
+
+This ensures consistency across system analysis, design, and Agile planning.
+
 ## Author
 **Sinothando Masiki**  
 
