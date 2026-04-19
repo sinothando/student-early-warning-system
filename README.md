@@ -16,6 +16,7 @@ A web-based system designed to help higher education institutions identify stude
 - [System Documentation](#system-documentation)
 - [Repository Structure](#repository-structure)
 - [Future Improvements](#future-improvements)
+- [UML diagrams](#UML-diagrams)
 - [Author](#author)
 
 ---
