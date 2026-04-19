@@ -274,3 +274,18 @@ Mapping to Functional Requirements
 
 FR9: Advisor Monitoring is represented through advisor assignment and support tracking.
 FR6: Dashboard Display may support visibility of intervention progress.
+
+
+### State Diagrams Traceability
+
+| Object | Functional Requirements | User Stories |
+|---|---|---|
+| Student | FR1, FR5, FR8, FR9 | US-001, US-006, US-009 |
+| Attendance Record | FR3, FR10 | US-003 |
+| Grade Record | FR4, FR10 | US-004 |
+| Risk Status | FR5, FR9 | US-009 |
+| Alert | FR6, FR7 | US-002, US-010 |
+| User Account | FR1, FR10 | US-001 |
+| Intervention Record | FR6, FR9 | US-007 |
+
+

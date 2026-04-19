@@ -329,3 +329,17 @@ FR9: Advisor Monitoring
 FR6: Dashboard Display
 FR7: Alert Notification
 US-007: Provide intervention
+
+
+### Activity Diagrams Traceability
+
+| Workflow | Functional Requirements | User Stories | Sprint Tasks |
+|---|---|---|---|
+| User Login | FR1 | US-001 | T-001 |
+| Record Attendance | FR3, FR10 | US-003 | T-002 |
+| Upload Grades | FR4, FR10 | US-004 | T-003 |
+| Risk Detection | FR5 | US-009 | T-004 |
+| Generate Alerts | FR6, FR7 | US-010 | T-005 |
+| View Dashboard | FR6, FR8 | US-005 | T-006 |
+| Monitor Students | FR6, FR9 | US-006 | T-006 |
+| Provide Intervention | FR6, FR7, FR9 | US-007 | T-004 |
