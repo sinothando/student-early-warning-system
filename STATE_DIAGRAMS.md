@@ -53,6 +53,8 @@ FR5: Risk Detection
 FR9: Advisor Monitoring
 FR8: Student View Access
 
+
+#### 2. Attendance Record State Diagram
 ```mermaid
 stateDiagram-v2
     [*] --> Created
@@ -87,6 +89,8 @@ FR3: Attendance Recording is reflected in the creation and submission of attenda
 FR10: Data Storage is reflected in the transition to Archived.
 
 
+
+#### 3. Grade Record State Diagram
 ```mermaid
     stateDiagram-v2
     [*] --> Draft
@@ -119,6 +123,8 @@ Mapping to Functional Requirements
 FR4: Grade Management is reflected in the upload and approval of grades.
 FR10: Data Storage is reflected in the final archived state.
 
+
+#### 4. Risk Status State Diagram
 ```mermaid
 stateDiagram-v2
     [*] --> Normal
@@ -157,6 +163,8 @@ FR5: Risk Detection is central to this object lifecycle.
 FR9: Advisor Monitoring is reflected in the movement to Monitored.
 
 
+
+#### 5. Alert State Diagram
 ```mermaid
 stateDiagram-v2
     [*] --> Generated
@@ -192,6 +200,8 @@ Mapping to Functional Requirements
 FR7: Alert Notification is directly represented in this lifecycle.
 FR6: Dashboard Display supports alert visibility and acknowledgment.
 
+
+#### 6. Intervention Record State Diagram
 ```mermaid
 stateDiagram-v2
     [*] --> Created
@@ -227,6 +237,9 @@ FR1: User Authentication is reflected in account activation and locking.
 FR10: Data Storage supports account persistence and account state management.
 
 
+
+
+#### 7. User Account State Diagram
 ```mermaid
 stateDiagram-v2
     [*] --> Planned
