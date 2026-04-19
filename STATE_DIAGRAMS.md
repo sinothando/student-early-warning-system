@@ -15,6 +15,7 @@ stateDiagram-v2
     Improved --> Active: Risk cleared
     Active --> Inactive: Student account deactivated
     Inactive --> Active: Student account reactivated
+```
 
 
 Explanation
