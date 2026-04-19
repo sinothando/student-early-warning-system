@@ -42,7 +42,7 @@ FR5: Risk Detection
 FR9: Advisor Monitoring
 FR8: Student View Access
 
-
+```mermaid
 stateDiagram-v2
     [*] --> Created
     Created --> PendingReview: Attendance submitted
@@ -50,7 +50,10 @@ stateDiagram-v2
     PendingReview --> Rejected: Attendance incomplete or incorrect
     Rejected --> PendingReview: Attendance corrected and resubmitted
     Validated --> Archived: End of academic period
+```
 
+
+```mermaid
     stateDiagram-v2
     [*] --> Draft
     Draft --> Submitted: Grades uploaded
@@ -58,8 +61,10 @@ stateDiagram-v2
     Submitted --> Rejected: Invalid or incomplete grades
     Rejected --> Draft: Corrections required
     Approved --> Archived: Finalized and stored
+```
 
 
+```mermaid
 stateDiagram-v2
     [*] --> Normal
     Normal --> UnderReview: New attendance or grade data received
@@ -70,8 +75,10 @@ stateDiagram-v2
     Monitored --> Resolved: Performance improves
     Critical --> Monitored: Intervention initiated
     Resolved --> Normal: Student stabilizes academically
+```
 
 
+```mermaid
 stateDiagram-v2
     [*] --> Generated
     Generated --> Sent: Alert delivered to dashboard
@@ -80,8 +87,10 @@ stateDiagram-v2
     Sent --> Expired: No response within defined period
     Actioned --> Closed: Issue handled
     Expired --> Closed: Alert no longer active
+```
 
 
+```mermaid
 stateDiagram-v2
     [*] --> Created
     Created --> Active: First successful login
@@ -90,8 +99,10 @@ stateDiagram-v2
     Active --> Suspended: Access temporarily revoked
     Suspended --> Active: Access restored
     Active --> Disabled: Account permanently disabled
+```
 
 
+```mermaid
 stateDiagram-v2
     [*] --> Planned
     Planned --> Assigned: Advisor assigned
@@ -100,3 +111,4 @@ stateDiagram-v2
     InProgress --> Escalated: Student needs additional support
     Escalated --> Completed: Additional support provided
     Completed --> Reviewed: Outcome evaluated
+```
