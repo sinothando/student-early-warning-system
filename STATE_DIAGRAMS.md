@@ -3,6 +3,17 @@
 
 ---
 
+### Critical objects:
+
+- Student
+- Attendance Record
+- Grade Record
+- Risk Status
+- Alert
+- Intervention Record
+- User Account
+- Dashboard Session
+
 ## 1. Student State Diagram
 
 ```mermaid
