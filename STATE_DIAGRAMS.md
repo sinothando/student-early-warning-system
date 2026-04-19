@@ -14,7 +14,7 @@
 - User Account
 - Dashboard Session
 
-## 1. Student State Diagram
+#### 1. Student State Diagram
 
 ```mermaid
 stateDiagram-v2
