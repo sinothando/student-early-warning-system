@@ -3,50 +3,44 @@
 
 ---
 
-## Entities and Their Definitions
+## Key Domain Entities
 
-| Entity | Attributes | Methods | Relationships |
-|--------|------------|---------|---------------|
-| Student | studentId, name, email, status | viewPerformance(), receiveAlert() | Linked to Attendance, Grades, RiskStatus |
-| AttendanceRecord | attendanceId, date, status | recordAttendance() | Belongs to Student |
-| GradeRecord | gradeId, score, module | uploadGrade() | Belongs to Student |
-| RiskStatus | riskLevel, evaluationDate | evaluateRisk() | Linked to Student |
-| Alert | alertId, message, status | generateAlert(), sendAlert() | Linked to Student and Advisor |
-| UserAccount | userId, username, password, role | login(), logout() | Represents system users |
-| InterventionRecord | interventionId, description, outcome | recordIntervention() | Linked to Student and Advisor |
-
----
-
-## Relationships
-
-- A **Student** has many AttendanceRecords (1..*)
-- A **Student** has many GradeRecords (1..*)
-- A **Student** has one RiskStatus (1..1)
-- A **Student** can have many Alerts (1..*)
-- An **Advisor** (UserAccount) manages many InterventionRecords (1..*)
-- An **InterventionRecord** belongs to one Student (1..1)
+| Entity | Attributes | Responsibilities / Methods | Relationships |
+|---|---|---|---|
+| UserAccount | userId, username, email, passwordHash, role, accountStatus | login(), logout(), updateProfile() | Parent class for Student, Lecturer, AcademicAdvisor, SystemAdmin |
+| Student | studentId, name, email, status | viewPerformance(), viewAlerts() | Has AttendanceRecords, GradeRecords, RiskStatus, Alerts, InterventionRecords |
+| Lecturer | lecturerId, name, email, department | recordAttendance(), uploadGrades(), viewDashboard() | Creates AttendanceRecords and GradeRecords |
+| AcademicAdvisor | advisorId, name, email | monitorStudent(), recordIntervention() | Manages InterventionRecords |
+| AttendanceRecord | attendanceId, date, attendancePercentage, status | recordAttendance(), validateAttendance() | Belongs to one Student |
+| GradeRecord | gradeId, moduleName, assessmentName, score, status | uploadGrade(), validateGrade() | Belongs to one Student |
+| RiskStatus | riskId, riskLevel, evaluationDate, reason | evaluateRisk(), updateRiskLevel() | Belongs to one Student |
+| Alert | alertId, message, alertStatus, createdDate | generateAlert(), acknowledgeAlert(), closeAlert() | Linked to Student and RiskStatus |
+| InterventionRecord | interventionId, description, outcome, interventionDate | recordIntervention(), updateOutcome() | Linked to Student and AcademicAdvisor |
 
 ---
 
 ## Business Rules
 
-- A student is marked **At Risk** if:
-  - Attendance < 70% OR
-  - Grade < 50%
-
-- A student can have **multiple alerts**, but each alert must be linked to a valid risk condition.
-
-- Only authorized users (lecturers/advisors) can:
-  - Record attendance
-  - Upload grades
-  - Provide interventions
-
-- Each intervention must be recorded and linked to a specific student.
-
-- A user must log in before accessing the system.
+1. A user must have a valid account before accessing the system.
+2. A `UserAccount` can be specialized as a `Student`, `Lecturer`, `AcademicAdvisor`, or `SystemAdmin`.
+3. A student is marked **At Risk** if attendance is below **70%** or average grade is below **50%**.
+4. A student can have many attendance records.
+5. A student can have many grade records.
+6. Each attendance record belongs to exactly one student.
+7. Each grade record belongs to exactly one student.
+8. Each student must have one current risk status.
+9. A risk status may generate one or more alerts.
+10. An alert must be linked to a valid student and risk status.
+11. Only lecturers can record attendance and upload grades.
+12. Only academic advisors can record intervention actions.
+13. A student may receive multiple interventions over time.
+14. An intervention record must be linked to one student and one academic advisor.
+15. Closed alerts must remain stored for audit and historical tracking.
 
 ---
 
-## Summary
+## Design Notes
 
-The domain model defines the core entities and their relationships in the system. It ensures that system functionality aligns with requirements, user stories, and previously designed diagrams.
+The domain model uses inheritance for different user roles because students, lecturers, advisors, and administrators all share common account details but perform different actions.
+
+Composition is used between `Student` and records such as `AttendanceRecord`, `GradeRecord`, `RiskStatus`, and `InterventionRecord` because these records depend on the student’s academic profile.
