@@ -6,7 +6,6 @@
 ```mermaid
 classDiagram
 
-classDiagram
 
 class UserAccount {
     -userId: String
