@@ -65,7 +65,7 @@ Student "1" -- "1" RiskStatus : has
 Student "1" -- "0..*" Alert : receives
 Student "1" -- "0..*" InterventionRecord : receives
 UserAccount "1" -- "0..*" InterventionRecord : manages
-
+```
 
 Explanation
 
