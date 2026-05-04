@@ -224,6 +224,22 @@ All diagrams are mapped to:
 
 This ensures consistency across system analysis, design, and Agile planning.
 
+## Assignment 10
+
+### Language Choice
+Java was selected due to its strong support for object-oriented programming and design patterns.
+
+### Creational Patterns Implemented
+
+- Simple Factory → User creation
+- Factory Method → Notification system
+- Abstract Factory → UI components
+- Builder → Report construction
+- Prototype → Alert cloning
+- Singleton → Database connection
+
+These patterns demonstrate different approaches to object creation.
+
 ## Author
 **Sinothando Masiki**  
 
