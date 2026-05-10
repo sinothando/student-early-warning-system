@@ -1,4 +1,4 @@
-package Tests;
+package tests;
 
 import creational_patterns.DatabaseConnection;
 import org.junit.jupiter.api.Test;

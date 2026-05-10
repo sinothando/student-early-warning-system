@@ -1,4 +1,4 @@
-package Tests;
+package tests;
 
 import creational_patterns.AlertPrototype;
 import org.junit.jupiter.api.Test;
