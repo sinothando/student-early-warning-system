@@ -240,6 +240,32 @@ Java was selected due to its strong support for object-oriented programming and 
 
 These patterns demonstrate different approaches to object creation.
 
+## API Documentation
+
+The REST API is documented using OpenAPI/Swagger.
+
+### Swagger UI
+
+Run the application and open:
+
+```text
+http://localhost:8080/swagger-ui/index.html
+```
+
+### API Features
+
+- Student CRUD operations
+- RESTful endpoints
+- JSON request/response handling
+- OpenAPI documentation
+- Error response handling
+
+### Documentation Files
+
+- `docs/openapi.yaml`
+- `docs/diagrams/swagger-screenshot.png`
+
+
 ## Author
 **Sinothando Masiki**  
 

@@ -1,0 +1,76 @@
+openapi: 3.0.0
+
+info:
+  title: Student Early Warning System API
+  version: 1.0.0
+  description: REST API for managing students, alerts, and attendance records.
+
+servers:
+  - url: http://localhost:8080
+
+paths:
+
+  /api/students:
+    get:
+      summary: Fetch all students
+      responses:
+        '200':
+          description: List of students returned successfully
+
+    post:
+      summary: Create a new student
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                studentId:
+                  type: string
+                name:
+                  type: string
+                status:
+                  type: string
+
+      responses:
+        '200':
+          description: Student created successfully
+
+        '400':
+          description: Invalid student input
+
+  /api/students/{id}:
+    get:
+      summary: Fetch a student by ID
+
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+
+      responses:
+        '200':
+          description: Student retrieved successfully
+
+        '404':
+          description: Student not found
+
+    delete:
+      summary: Delete a student
+
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+
+      responses:
+        '200':
+          description: Student deleted successfully
+
+        '404':
+          description: Student not found
