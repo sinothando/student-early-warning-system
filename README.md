@@ -264,6 +264,8 @@ http://localhost:8080/swagger-ui/index.html
 
 - `docs/openapi.yaml`
 - `docs/diagrams/swagger-screenshot.png`
+- `docs/diagrams/github-project-board.png`
+
 
 
 ## Author
