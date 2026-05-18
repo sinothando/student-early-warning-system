@@ -262,7 +262,7 @@ http://localhost:8080/swagger-ui/index.html
 
 ### Documentation Files
 
-- `docs/openapi.yaml`
+ [Openai](docs/openapi.yaml)
 ![Swagger](docs/diagrams/swagger-screenshot.png)
 ![Board](docs/diagrams/github-project-board.png)
 
