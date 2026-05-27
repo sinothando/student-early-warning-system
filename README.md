@@ -267,6 +267,35 @@ http://localhost:8080/swagger-ui/index.html
 ![Board](docs/diagrams/github-project-board.png)
 
 
+# CI/CD Pipeline
+
+## Running Tests Locally
+
+Run the following command:
+
+```bash
+mvn test
+```
+
+## CI Pipeline
+
+GitHub Actions automatically runs all unit and integration tests whenever code is pushed or a pull request is created.
+
+## CD Pipeline
+
+When changes are merged into the main branch, the system automatically:
+
+1. Builds the application
+2. Generates a JAR artifact
+3. Uploads the artifact to GitHub Actions
+
+## Branch Protection
+
+The main branch is protected using:
+- Pull request reviews
+- Required status checks
+- Restricted direct pushes
+
 
 ## Author
 **Sinothando Masiki**  
