@@ -266,6 +266,189 @@ http://localhost:8080/swagger-ui/index.html
 ![Swagger](docs/diagrams/swagger-screenshot.png)
 ![Board](docs/diagrams/github-project-board.png)
 
+# Student Early Warning System
+
+## Overview
+
+The Student Early Warning System (SEWS) is a Spring Boot application designed to help educational institutions identify and monitor at-risk students through attendance tracking, academic performance monitoring, and risk analysis.
+
+---
+
+## Features
+
+- Student management
+- Attendance tracking
+- Academic performance monitoring
+- Risk assessment and alerts
+- REST API endpoints
+- Repository pattern implementation
+- CI/CD with GitHub Actions
+
+---
+
+## Technologies Used
+
+- Java 21
+- Spring Boot 3
+- Maven
+- JUnit 5
+- GitHub Actions
+- Swagger/OpenAPI
+
+---
+
+## Project Structure
+
+```plaintext
+src/
+├── main/
+│   ├── java/
+│   └── resources/
+├── test/
+repositories/
+services/
+controllers/
+factories/
+```
+
+---
+
+## Prerequisites
+
+Before running the project, ensure you have:
+
+- Java 21+
+- Maven 3.9+
+- Git
+- VS Code or IntelliJ IDEA
+
+---
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/YOUR-USERNAME/student-early-warning-system.git
+```
+
+Navigate to the project:
+
+```bash
+cd student-early-warning-system
+```
+
+Build the project:
+
+```bash
+mvn clean install
+```
+
+---
+
+## Running the Application
+
+```bash
+mvn spring-boot:run
+```
+
+The application will be available at:
+
+```plaintext
+http://localhost:8080
+```
+
+---
+
+## Running Tests
+
+Execute all tests:
+
+```bash
+mvn test
+```
+
+Generate a package:
+
+```bash
+mvn clean package
+```
+
+---
+
+## API Documentation
+
+Swagger UI:
+
+```plaintext
+http://localhost:8080/swagger-ui/index.html
+```
+
+---
+
+## CI/CD Pipeline
+
+GitHub Actions automatically:
+
+1. Runs tests on every push.
+2. Runs tests on Pull Requests.
+3. Prevents merging when tests fail.
+4. Builds a JAR artifact when changes are merged into `main`.
+
+Workflow file:
+
+```plaintext
+.github/workflows/ci.yml
+```
+
+---
+
+## Branch Protection
+
+The `main` branch is protected using:
+
+- Pull Request reviews
+- Required status checks
+- Restricted direct pushes
+
+This ensures that all code changes are reviewed and tested before being merged.
+
+---
+
+## Contribution Guidelines
+
+Please see:
+
+```plaintext
+CONTRIBUTING.md
+```
+
+for information on contributing to this project.
+
+---
+
+## Project Roadmap
+
+Future enhancements are documented in:
+
+```plaintext
+ROADMAP.md
+```
+
+---
+
+## License
+
+This project is licensed under the MIT License.
+
+See:
+
+```plaintext
+LICENSE
+```
+
+for details.
+
 
 
 ## Author
