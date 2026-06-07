@@ -6,6 +6,17 @@ Thank you for your interest in contributing to the Student Early Warning System 
 
 The Student Early Warning System is designed to help educational institutions identify and support at-risk students through attendance tracking, academic performance monitoring, and risk analysis.
 
+## Table of Contents
+- [Prerequisites](#prerequisites)
+- [Getting Started](#getting-started)
+- [Development Workflow](#development-workflow)
+- [Coding Standards](#coding-standards)
+- [Testing Requirements](#testing-requirements)
+- [Reporting Issues](#reporting-issues)
+- [Common Issues & Troubleshooting](#common-issues--troubleshooting)
+- [Pull Request Checklist](#pull-request-checklist)
+- [Code of Conduct](#code-of-conduct)
+
 ---
 
 ## Prerequisites
@@ -156,6 +167,28 @@ New contributors are encouraged to start with issues labeled:
 - `enhancement`
 
 These tasks are designed to help contributors become familiar with the project.
+
+---
+
+## Common Issues & Troubleshooting
+
+### Maven build fails
+Ensure you have Java 21+ installed:
+
+```bash
+java -version
+mvn -version
+```
+
+### Port already in use
+If port 8080 is already in use, change it in `src/main/resources/application.properties`:
+
+### Tests failing
+Ensure you have a clean build before running tests:
+
+```bash
+mvn clean test
+```
 
 ---
 
