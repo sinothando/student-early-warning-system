@@ -1,147 +1,311 @@
-# 🎓 Student Early Warning System for Academic Risk Detection
+# 🎓 Student Early Warning System (SEWS)
 
-A web-based system designed to help higher education institutions identify students who may be at risk of poor academic performance by monitoring academic indicators such as attendance and assessment results.
+A web-based system that helps higher education institutions identify students at risk of poor academic performance by monitoring indicators such as attendance and assessment results.
 
 ---
 
 ## Table of Contents
-- [Project Overview](#project-overview)
-- [Project Domain](#project-domain)
+
+- [Overview](#overview)
 - [Problem Statement](#problem-statement)
 - [System Users](#system-users)
-- [Core System Features](#core-system-features)
-- [System Architecture Overview](#system-architecture-overview)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [System Architecture](#system-architecture)
 - [System Workflow](#system-workflow)
-- [Individual Project Scope](#individual-project-scope)
-- [System Documentation](#system-documentation)
-- [Repository Structure](#repository-structure)
+- [Project Scope](#project-scope)
+- [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
+    - [Running the Application](#running-the-application)
+    - [Running Tests](#running-tests)
+- [Project Structure](#project-structure)
+- [API Documentation](#api-documentation)
+- [Design Patterns](#design-patterns)
+- [CI/CD Pipeline](#cicd-pipeline)
+- [Branch Protection](#branch-protection)
+- [Project Documentation](#project-documentation)
+- [Agile & Kanban Workflow](#agile--kanban-workflow)
 - [Future Improvements](#future-improvements)
-- [UML diagrams](#UML-diagrams)
+- [Contribution Guidelines](#contribution-guidelines)
+- [Project Roadmap](#project-roadmap)
+- [License](#license)
 - [Author](#author)
 
 ---
 
-## Project Overview
-The **Student Early Warning System** is a web-based academic monitoring platform designed to assist educational institutions in identifying students who may be at risk of academic failure. The system analyzes academic indicators such as attendance records and assessment results to detect early warning signs of academic difficulty.
+## Overview
 
-By identifying at-risk students early, lecturers and academic advisors can provide timely academic support and interventions. This proactive approach helps improve student retention, academic success, and overall institutional performance.
+The **Student Early Warning System (SEWS)** is a Spring Boot application designed to help educational institutions identify and monitor at-risk students. It analyzes academic indicators — attendance records and assessment results — to detect early warning signs of academic difficulty, so lecturers and academic advisors can step in with timely support.
 
----
+By identifying at-risk students early, this proactive approach helps improve student retention, academic success, and overall institutional performance.
 
-## Project Domain
-**Higher Education / Academic Performance Monitoring Systems**
-
-The system operates within the higher education environment where institutions need effective tools to monitor student academic progress. Universities often manage large numbers of students, making manual monitoring of academic performance difficult and time-consuming. This system provides a centralized platform that allows academic staff to monitor student performance and quickly identify students who may require additional support.
+**Domain:** Higher Education / Academic Performance Monitoring
 
 ---
 
 ## Problem Statement
-In many higher education institutions, students who experience academic difficulties are often identified too late, usually after poor assessment results or near the end of the academic term. This delayed identification limits the effectiveness of academic support interventions and increases the likelihood of student failure or dropout.
 
-Manual monitoring of student performance is often inefficient and prone to oversight, particularly in large classes. The **Student Early Warning System** addresses this issue by automatically monitoring key academic indicators such as attendance and assessment performance to detect early signs of academic risk and notify relevant academic staff.
+In many institutions, students experiencing academic difficulties are identified too late — usually after poor assessment results or near the end of the term. This delayed identification limits the effectiveness of academic interventions and increases the risk of failure or dropout.
+
+Manual monitoring is inefficient and prone to oversight, especially in large classes. SEWS addresses this by automatically tracking attendance and assessment performance to flag early signs of risk and notify the relevant staff.
 
 ---
 
 ## System Users
-The system is designed to support multiple users within the academic environment.
 
-### Students
+**Students**
 - View their academic performance status
-- Receive notifications if they are identified as at-risk
+- Receive notifications if flagged as at-risk
 
-### Lecturers
+**Lecturers**
 - Record student attendance
 - Upload assessment results
-- View dashboards displaying student performance and risk indicators
+- View dashboards of student performance and risk indicators
 
-### Academic Advisors
+**Academic Advisors**
 - Monitor students flagged as at-risk
-- Provide academic guidance and intervention strategies
+- Provide guidance and intervention strategies
 
 ---
 
-## Core System Features
-The proposed system will include the following key features:
+## Features
 
 - User authentication and login system
 - Student record management
 - Attendance tracking and monitoring
 - Assessment and grade recording
-- Academic performance monitoring
 - Automated detection of at-risk students based on predefined rules
-- Dashboard for lecturers and academic advisors to monitor student progress
-- Alert notifications for students identified as at-risk
+- Dashboards for lecturers and academic advisors
+- Alert notifications for at-risk students
+- REST API with OpenAPI/Swagger documentation
+- Repository pattern implementation
+- CI/CD with GitHub Actions
 
 ---
 
-## System Architecture Overview
-The system follows a simple **web-based architecture** consisting of the following components:
+## Technologies Used
 
-- **Web Frontend:** User interface accessed by lecturers, students, and academic advisors through a web browser
-- **Backend Application Server:** Handles system logic, data processing, and risk analysis
-- **Risk Detection Module:** Evaluates academic indicators to identify at-risk students
-- **Database:** Stores student information, attendance records, and assessment results
-- **Notification Service:** Generates alerts for flagged students
+| Category   | Technology         |
+|------------|---------------------|
+| Language   | Java 21              |
+| Framework  | Spring Boot 3        |
+| Build Tool | Maven 3.9+           |
+| Testing    | JUnit 5              |
+| API Docs   | Swagger / OpenAPI    |
+| CI/CD      | GitHub Actions       |
+
+---
+
+## System Architecture
+
+SEWS follows a simple web-based architecture made up of:
+
+- **Web Frontend** — UI accessed by lecturers, students, and advisors via a browser
+- **Backend Application Server** — handles system logic, data processing, and risk analysis
+- **Risk Detection Module** — evaluates academic indicators to identify at-risk students
+- **Database** — stores student information, attendance records, and assessment results
+- **Notification Service** — generates alerts for flagged students
+
+Detailed diagrams: see [System Documentation](#project-documentation).
 
 ---
 
 ## System Workflow
-The system workflow illustrates how the components interact to detect and manage academic risks.
 
 1. Lecturers log into the system.
 2. Lecturers record student attendance and assessment results.
 3. The system stores academic data in the database.
 4. The risk detection module analyzes attendance and assessment data.
 5. Students meeting predefined risk conditions are flagged as at-risk.
-6. Lecturers and academic advisors view flagged students through a monitoring dashboard.
-7. Academic support interventions can then be initiated.
+6. Lecturers and academic advisors view flagged students on a monitoring dashboard.
+7. Academic support interventions are initiated.
 
 ---
 
-## Individual Project Scope
-This project focuses on the **design and documentation of a simplified Student Early Warning System** that can be developed and managed by a single developer.
+## Project Scope
 
-The system will monitor academic indicators such as attendance and assessment results and identify at-risk students using predefined threshold rules. It will provide dashboards for lecturers and academic advisors to review student performance and risk alerts.
+This project focuses on the **design and implementation of a simplified SEWS**, feasible for a single developer while still demonstrating a complete end-to-end system.
 
-The project will **not include** the following advanced features:
+**In scope:** attendance/assessment monitoring, threshold-based risk detection, dashboards for lecturers and advisors.
 
+**Out of scope:**
 - Complex machine learning prediction models
 - Integration with existing university enterprise systems
 - Mobile applications
 - Real-time large-scale analytics pipelines
 
-Limiting the scope ensures that the system remains feasible for an individual developer while still demonstrating a complete end-to-end system design.
+---
+
+## Getting Started
+
+### Prerequisites
+
+- Java 21+
+- Maven 3.9+
+- Git
+- VS Code or IntelliJ IDEA
+
+### Installation
+
+Clone the repository:
+```bash
+git clone https://github.com/YOUR-USERNAME/student-early-warning-system.git
+cd student-early-warning-system
+```
+
+Build the project:
+```bash
+mvn clean install
+```
+
+### Running the Application
+
+```bash
+mvn spring-boot:run
+```
+
+The application will be available at:
+```
+http://localhost:8080
+```
+
+### Running Tests
+
+Run all tests:
+```bash
+mvn test
+```
+
+Build a packaged JAR:
+```bash
+mvn clean package
+```
 
 ---
 
-## System Documentation
-Detailed project documentation is available in the following files:
+## Project Structure
 
-- **System Specification:**  
-  [SPECIFICATION.md](SPECIFICATION.md)
-
-- **System Architecture and C4 Diagrams:**  
-  [ARCHITECTURE.md](ARCHITECTURE.md)
-
----
-
-## Repository Structure
-student-early-warning-system
+```
+student-early-warning-system/
 │
 ├── README.md
 ├── SPECIFICATION.md
 ├── ARCHITECTURE.md
+├── pom.xml
 │
-└── docs
-     └── diagrams
-          ├── context-diagram.png
-          ├── container-diagram.png
-          └── component-diagram.png
+├── docs/
+│   ├── openapi.yaml
+│   └── diagrams/
+│       ├── context-diagram.png
+│       ├── container-diagram.png
+│       ├── component-diagram.png
+│       ├── swagger-screenshot.png
+│       └── github-project-board.png
+│
+└── src/
+    ├── main/
+    │   ├── java/
+    │   │   ├── api/              # REST controllers
+    │   │   ├── model/            # Domain entities
+    │   │   ├── repositories/     # Data access layer
+    │   │   ├── services/         # Business logic
+    │   │   ├── factories/        # Object-creation factories
+    │   │   └── creational_patterns/
+    │   └── resources/
+    └── test/
+        └── java/
+```
+
+---
+
+## API Documentation
+
+The REST API is documented using OpenAPI/Swagger.
+
+- **Swagger UI:** run the application and open `http://localhost:8080/swagger-ui/index.html`
+- **OpenAPI spec:** [docs/openapi.yaml](docs/openapi.yaml)
+
+**Capabilities:**
+- Student CRUD operations
+- RESTful endpoints
+- JSON request/response handling
+- Error response handling
+
+---
+
+## Design Patterns
+
+Java was chosen for its strong support for object-oriented design. SEWS demonstrates the six creational patterns:
+
+| Pattern          | Applied To                |
+|------------------|----------------------------|
+| Simple Factory   | User creation              |
+| Factory Method   | Notification system        |
+| Abstract Factory | UI components               |
+| Builder          | Report construction        |
+| Prototype        | Alert cloning               |
+| Singleton        | Database connection         |
+
+---
+
+## CI/CD Pipeline
+
+GitHub Actions automatically:
+
+1. Runs tests on every push and on pull requests.
+2. Prevents merging when tests fail.
+3. Builds a JAR artifact when changes are merged into `main`.
+4. Uploads the artifact as a build output.
+
+Workflow file: `.github/workflows/ci.yml`
+
+To run the same tests locally:
+```bash
+mvn test
+```
+
+---
+
+## Branch Protection
+
+The `main` branch is protected using:
+- Required pull request reviews
+- Required status checks
+- Restricted direct pushes
+
+This ensures all code changes are reviewed and tested before merging.
+
+---
+
+## Project Documentation
+
+- **System Specification:** [SPECIFICATION.md](SPECIFICATION.md)
+- **System Architecture & C4 Diagrams:** [ARCHITECTURE.md](ARCHITECTURE.md)
+- **State Transition Diagrams:** [STATE_DIAGRAMS.md](STATE_DIAGRAMS.md)
+- **Activity Diagrams:** [ACTIVITY_DIAGRAMS.md](ACTIVITY_DIAGRAMS.md)
+
+All diagrams are traceable to the Functional Requirements and to the User Stories/Sprint Tasks, keeping system analysis, design, and Agile planning consistent.
+
+---
+
+## Agile & Kanban Workflow
+
+The GitHub Kanban board was customized to support Agile workflow management:
+
+**Custom columns:**
+- **Testing** — completed tasks undergoing verification (QA)
+- **Blocked** — tasks stalled by dependencies or issues, surfacing bottlenecks
+
+**Full column set:** To Do → In Progress → Testing → Done, with Blocked as needed.
+
+**Labels** capture priority (e.g. high-priority), type (e.g. feature, system), and area (e.g. frontend, backend). Tasks are assigned via @mentions to simulate team responsibility, even though the project is completed individually.
+
+This supports Agile principles: visual workflow tracking, limited work-in-progress, continuous task movement, and transparency.
 
 ---
 
 ## Future Improvements
-Potential future enhancements for the system may include:
 
 - Machine learning-based academic risk prediction
 - Integration with Learning Management Systems (LMS)
@@ -151,335 +315,24 @@ Potential future enhancements for the system may include:
 
 ---
 
-## Github Part
-
-## Kanban Board Customization
-
-The GitHub Kanban board was customized to support Agile workflow management for the Student Early Warning System.
-
-### Custom Columns
-
-Two additional columns were added:
-
-- **Testing**  
-  This column represents tasks that have been completed and are undergoing verification before being marked as done. It aligns with quality assurance (QA) practices in software development.
-
-- **Blocked**  
-  This column is used to track tasks that cannot proceed due to dependencies or issues. It helps identify bottlenecks in the workflow and ensures transparency.
-
-### Task Organization
-
-User stories created in Assignment 6 were added to the Kanban board as GitHub Issues. These issues were categorized into different stages of development:
-
-- **To Do:** Tasks ready to be started  
-- **In Progress:** Tasks currently being worked on  
-- **Testing:** Tasks under verification  
-- **Done:** Completed tasks  
-- **Blocked:** Tasks facing issues  
-
-### Labels and Assignments
-
-Each issue was labeled to indicate:
-- Priority (e.g., high-priority)
-- Type (e.g., feature, system)
-- Area (e.g., frontend, backend)
-
-Tasks were assigned using @mentions to simulate team responsibility, even though the project is completed individually.
-
-### Agile Alignment
-
-The Kanban board supports Agile principles by:
-- Providing visual workflow tracking
-- Limiting work-in-progress
-- Enabling continuous task movement
-- Improving transparency and organization
-
-Overall, the customized Kanban board enhances task management and reflects real-world Agile development practices.
-
-
-## Assignment 8: Object and Workflow Modeling
-
-This section contains the UML diagrams used to model system behavior and workflows.
-
-### State Transition Diagrams
-- [View State Diagrams](STATE_DIAGRAMS.md)
-
-These diagrams model how key system objects change over time based on events and conditions.
-
----
-
-### Activity Diagrams
-- [View Activity Diagrams](ACTIVITY_DIAGRAMS.md)
-
-These diagrams represent system workflows, including decision points, parallel processes, and actor responsibilities.
-
----
-
-### Traceability
-
-All diagrams are mapped to:
-
-- Functional Requirements (Assignment 4)
-- User Stories and Sprint Tasks (Assignment 6)
-
-This ensures consistency across system analysis, design, and Agile planning.
-
-## Assignment 10
-
-### Language Choice
-Java was selected due to its strong support for object-oriented programming and design patterns.
-
-### Creational Patterns Implemented
-
-- Simple Factory → User creation
-- Factory Method → Notification system
-- Abstract Factory → UI components
-- Builder → Report construction
-- Prototype → Alert cloning
-- Singleton → Database connection
-
-These patterns demonstrate different approaches to object creation.
-
-## API Documentation
-
-The REST API is documented using OpenAPI/Swagger.
-
-### Swagger UI
-
-Run the application and open:
-
-```text
-http://localhost:8080/swagger-ui/index.html
-```
-
-### API Features
-
-- Student CRUD operations
-- RESTful endpoints
-- JSON request/response handling
-- OpenAPI documentation
-- Error response handling
-
-### Documentation Files
-
- [Openai](docs/openapi.yaml)
-![Swagger](docs/diagrams/swagger-screenshot.png)
-![Board](docs/diagrams/github-project-board.png)
-
-# Student Early Warning System
-
-## Overview
-
-The Student Early Warning System (SEWS) is a Spring Boot application designed to help educational institutions identify and monitor at-risk students through attendance tracking, academic performance monitoring, and risk analysis.
-
----
-
-## Features
-
-- Student management
-- Attendance tracking
-- Academic performance monitoring
-- Risk assessment and alerts
-- REST API endpoints
-- Repository pattern implementation
-- CI/CD with GitHub Actions
-
----
-
-## Technologies Used
-
-- Java 21
-- Spring Boot 3
-- Maven
-- JUnit 5
-- GitHub Actions
-- Swagger/OpenAPI
-
----
-
-## Project Structure
-
-```plaintext
-src/
-├── main/
-│   ├── java/
-│   └── resources/
-├── test/
-repositories/
-services/
-controllers/
-factories/
-```
-
----
-
-## Prerequisites
-
-Before running the project, ensure you have:
-
-- Java 21+
-- Maven 3.9+
-- Git
-- VS Code or IntelliJ IDEA
-
----
-
-## Installation
-
-Clone the repository:
-
-```bash
-git clone https://github.com/YOUR-USERNAME/student-early-warning-system.git
-```
-
-Navigate to the project:
-
-```bash
-cd student-early-warning-system
-```
-
-Build the project:
-
-```bash
-mvn clean install
-```
-
----
-
-## Running the Application
-
-```bash
-mvn spring-boot:run
-```
-
-The application will be available at:
-
-```plaintext
-http://localhost:8080
-```
-
----
-
-## Running Tests
-
-Execute all tests:
-
-```bash
-mvn test
-```
-
-Generate a package:
-
-```bash
-mvn clean package
-```
-
----
-
-## API Documentation
-
-Swagger UI:
-
-```plaintext
-http://localhost:8080/swagger-ui/index.html
-```
-
----
-
-## CI/CD Pipeline
-
-GitHub Actions automatically:
-
-1. Runs tests on every push.
-2. Runs tests on Pull Requests.
-3. Prevents merging when tests fail.
-4. Builds a JAR artifact when changes are merged into `main`.
-
-Workflow file:
-
-```plaintext
-.github/workflows/ci.yml
-```
-
----
-
-## Branch Protection
-
-The `main` branch is protected using:
-
-- Pull Request reviews
-- Required status checks
-- Restricted direct pushes
-
-This ensures that all code changes are reviewed and tested before being merged.
-
----
-
 ## Contribution Guidelines
 
-Please see:
-
-```plaintext
-CONTRIBUTING.md
-```
-
-for information on contributing to this project.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for information on contributing to this project.
 
 ---
 
 ## Project Roadmap
 
-Future enhancements are documented in:
-
-```plaintext
-ROADMAP.md
-```
+Future enhancements are documented in [ROADMAP.md](ROADMAP.md).
 
 ---
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
 
-See:
-
-```plaintext
-LICENSE
-```
-
-for details.
-
-
-# CI/CD Pipeline
-
-## Running Tests Locally
-
-Run the following command:
-
-```bash
-mvn test
-```
-
-## CI Pipeline
-
-GitHub Actions automatically runs all unit and integration tests whenever code is pushed or a pull request is created.
-
-## CD Pipeline
-
-When changes are merged into the main branch, the system automatically:
-
-1. Builds the application
-2. Generates a JAR artifact
-3. Uploads the artifact to GitHub Actions
-
-## Branch Protection
-
-The main branch is protected using:
-- Pull request reviews
-- Required status checks
-- Restricted direct pushes
-
+---
 
 ## Author
-**Sinothando Masiki**  
 
+**Sinothando Masiki**
